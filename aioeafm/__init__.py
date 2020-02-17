@@ -65,4 +65,4 @@ async def get_station(session: aiohttp.ClientSession, station: str) -> Dict[str,
     )
     results = await response.json()
 
-    return results
+    return results["items"]
