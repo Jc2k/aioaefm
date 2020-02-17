@@ -12,10 +12,11 @@ install:
 - poetry install
 
 script:
-- poetry run isort -rc -c --diff aiohomekit tests
-- poetry run black aiohomekit tests --check --diff
-- poetry run flake8 aiohomekit tests
-- poetry run mypy aiohomekit
+- poetry run isort -rc -c --diff aioeafm tests
+- poetry run black aioeafm tests --check --diff
+- poetry run flake8 aioeafm tests
+- poetry run mypy aioeafm
+- poetry run pylint aioeafm
 - poetry run coverage run -m pytest tests/
 - poetry build
 
@@ -32,9 +33,6 @@ jobs:
     dist: xenial
     python: 3.8
 
-  - os: osx
-    language: generic
-
   - stage: deploy
     dist: xenial
     python: 3.7
@@ -47,7 +45,7 @@ jobs:
         skip_cleanup: true
         script: poetry publish
         on:
-          repo: Jc2k/aiohomekit
+          repo: Jc2k/aioeafm
           tags: true
 
       - provider: releases
@@ -57,7 +55,7 @@ jobs:
         file_glob: true
         file: dist/*
         on:
-          repo: Jc2k/aiohomekit
+          repo: Jc2k/aioeafm
           tags: true
 
 env:

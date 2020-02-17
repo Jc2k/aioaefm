@@ -1,3 +1,4 @@
+"""Thin wrapper around the UK Environment Agent Real-time Flood Monitoring API."""
 import enum
 from typing import Any, Dict, List
 
@@ -5,6 +6,8 @@ import aiohttp
 
 
 class Status(enum.Enum):
+
+    """The status of the monitoring station."""
 
     ACTIVE = "Active"
     CLOSED = "Closed"
@@ -45,12 +48,12 @@ async def get_stations(
     response = await session.get(
         "http://environment.data.gov.uk/flood-monitoring/id/stations",
         raise_for_status=True,
-        timeout=aiohttp.ClientTimeout(total=60),
+        timeout=aiohttp.ClientTimeout(total=30),
         params=params,
     )
     results = await response.json()
 
-    return results
+    return results["items"]
 
 
 async def get_station(session: aiohttp.ClientSession, station: str) -> Dict[str, Any]:
@@ -58,7 +61,7 @@ async def get_station(session: aiohttp.ClientSession, station: str) -> Dict[str,
     response = await session.get(
         f"http://environment.data.gov.uk/flood-monitoring/id/stations/{station}",
         raise_for_status=True,
-        timeout=aiohttp.ClientTimeout(total=30),
+        timeout=aiohttp.ClientTimeout(total=15),
     )
     results = await response.json()
 
