@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "aioeafm"
-version = "0.1.0"
+version = "0.1.1"
 description = "An asyncio wrapper for the UK Environment Agency Flood Monitoring API"
 authors = ["John Carr <john.carr@unrouted.co.uk>"]
 license = "Apache-2.0"
