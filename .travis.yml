@@ -50,8 +50,7 @@ jobs:
     - provider: releases
       skip_cleanup: true
       api_key:
-        secure: Arazs2T9edxQ/YY9c1FVt1WSz8wHRnkBHoNzbLwwIQ3v3InKkSjBTaXx/bkMGlqIkGiI0ExW5cJl/pmESXJAFE+2fxb3LK7FKrZB/1bAbD/fKFToEhUTUf8FHgQPjzSAW9k4zoieQPtRzmda99GbZgfqPfYaC/DgZ2bOjdbuSgEYHqQbC1HtykY6HFD522WVIF4/ZrkxXDc4srQzCoBxpUpJXCzrPZlGv+/aZpH4Il/tMdza15hNeSlT9Gj2bCx0k2LmzTH/+iKWUocMtqwQKMyRdIn/NSBQkJ8XMSPp261YpkJYH0m3g5ACwSRmnnxz21E8oM7jDvx6lkU5I+CJggrIRq6JCY/mYMEkjbihsHNz3rUfDaewZzIphg8boNaYOfi+sVVRLrLyMGRx5AG1XumpKxcBZlS6UP7aqn4T8uvbUmOqfi7tY3hnqr5fP7Zhcr5COl3+FS/BKTefqHJqLyI1wQpQsE46qD4JKWAkzLMC92NdCnLA6eFQ9jeG3KG38KuezDguQJjHgNi85lQQeRxAi5jLezWvtxWLouU5CZqqutgwTyr1xjFeq7lXKGwjJ0ylj/dMJpm32OVSBNH1DHO8LEoNxmmY5q/2d7NanteAtneHnAnYnLL3dnT91P0IQaNDik/1fVEEvLxlCxoxHTAcjexsaWozlmrtA7bif0k=
-      file_glob: true
+        secure: LRKRlqKfZ5X1vPhH2fGhqLBX8cXShcV7HuM4/MaMJ8SRxF0Rde2ul6NsT6P2gzMHvTgodWf4J/w9WxA0eHbIDwzng9yhM05HdMhMytC6bzD+4IQ1REQjIKJEGvnGbewXPsYHWnszAYF/kHCnl/kn/2DyLXBUkHHoyiAItAt0cMxDmRee2dZyHOh1CU+RBxkPaQYFPrK63cT23QkOx7A9nT1UvWm/6KeaQ5T6ADd+VaR2z+SlD98CaSvPgxzkviCF1vepv8jA5VvJjiJ+8+YlzKsUa0dvQ1ybTCJKXtA5AZm1fq9FSkdLl3VI1oZBjIGtt1aiSRcK5eQNA4a8MmgoJAcxF8EHR3sVrlWXbGKZGTtulRSpsbD/OcaOyAeDvgq7dr1Q9Yr2gMTUfsmaeOEgiPpOHE+k8rch4KyqUUTUINg54SOD0TCHYxK5d3dJbB91mskG2gquyxJs/GrMoy28OloUgKF/G+FcA/4eaSN7lDboPEasbBi+7YcwPY7LCbQdJe2u+eL3ULzji5VCDeeuwyeWNrGE8cJPR1aDSybb7qBDbl9MUn8yMo2DVA6tjqrpYLJQ2cXjUkuYEZMlg5FR36ADNTp2MQONmgB9CBASjdrOD8NhgOj3IzjB9syYpNTVdMrJRM8m+3K7/wgXjSVs04mnYfRhjSQHlnk4aZQVI+A=
       file: dist/*
       on:
         repo: Jc2k/aioeafm
