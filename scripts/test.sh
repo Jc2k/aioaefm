@@ -1,12 +1,9 @@
 #! /bin/sh
-
 set -e
-
-isort -rc aioeafm tests
-black aioeafm tests
-flake8 aioeafm tests
-mypy aioeafm
-pylint aioeafm tests
-
-coverage run -m pytest tests/
-
+find . -name '*.py' -exec pyupgrade --py36-plus {} +
+python -m black tests aioeafm
+python -m isort tests aioeafm
+python -m black tests aioeafm --check --diff
+python -m flake8 tests aioeafm
+python -m pylint tests aioeafm
+python -m pytest
